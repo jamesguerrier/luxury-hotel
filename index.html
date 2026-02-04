@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luxury Hotel</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   </head>
   <body>
-    <header class="navbar">
+    <header class="navbar" id="mainNavbar">
       <div class="nav-container">
         <div class="logo">
           <span class="logo-icon">
-            <img src="./asset/logo.png" width="30px" />
+            <img src="./asset/logo.png" width="30px" alt="logo"/>
           </span>
-          <span>Luxury Hotel</span>
+          <span class="logo-text">Casa Cana</span>
         </div>
 
         <nav class="nav-links" id="navLinks">
@@ -22,29 +24,37 @@
           <a href="#contact">Contact</a>
           <a href="#about">About Us</a>
           <a href="#service">Services</a>
-          <a href="#contact"><button class="login-btn">Book Now</button></a>
+          <div class="nav-action">
+            <a href="#contact" class="book-btn">Book Now</a>
+          </div>
         </nav>
-
-          
-
 
         <div class="hamburger" id="hamburger">☰</div>
       </div>
     </header>
-    <div class="hero-image">
-      <img src="./asset/logo.jpeg" alt="logo" width="300px" />
-    </div>
 
     <section class="hero" id="home">
+      <div class="hero-bg">
+        <img src="./asset/hotel-7885138_1280.jpg" alt="Luxury Villa View" />
+        <div class="hero-overlay"></div>
+      </div>
       <div class="hero-container">
-        <a class="hero-text">
-          <h1>Luxury Hotel</h1>
-          <h2>PUTA CANA</h2>
-          <a href="#contact"><button class="cta-btn">Book</button></a>
+        <div class="hero-content reveal">
+          <span class="hero-subtitle">Boutique Luxury Villa</span>
+          <h1 class="hero-title">Experience Paradise</h1>
+          <h2 class="hero-location">PUNTA CANA</h2>
+          <div class="hero-actions">
+            <a href="#contact" class="hero-main-btn">Book Your Stay</a>
+            <a href="#service" class="hero-sub-btn">Our Services</a>
+          </div>
         </div>
       </div>
+      <div class="hero-scroll-down">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
     </section>
-    <section class="preview-galery" id="gallery">
+    <section class="preview-galery reveal" id="gallery">
       <div class="card-preview">
         <div class="fade-background-top"></div>
         <img src="./asset/hotel-7885138_1280.jpg" alt="hotel-beach" />
@@ -66,14 +76,24 @@
         <p class="fade-background">beautiful pool</p>
       </div>
     </section>
-    <div class="make-action">
-      <div class="fade-background-top"></div>
-         <button class="cta-btn" href="#contact">Book Now</button>
-      <h3>Flags: lucxiry Hotel to book</h3>
-      <a href="#gallery"><p class="cta-btn">See more</p></a>
-      <div class="fade-background"></div>
-    </div>
-    <section class="video-section">
+    <section class="booking-cta reveal">
+      <div class="cta-overlay"></div>
+      <div class="cta-container">
+        <div class="cta-content">
+          <span class="cta-subtitle">Exclusive Retreat</span>
+          <h2 class="cta-title">Refine Your Luxury Experience</h2>
+          <p class="cta-description">
+            Discover the perfect blend of Caribbean charm and modern elegance. 
+            Book your stay at Casa Cana today and create memories that last a lifetime.
+          </p>
+          <div class="cta-actions">
+            <a href="#contact" class="cta-main-btn">Book Your Stay</a>
+            <a href="#gallery" class="cta-sub-btn">Explore Villa</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="video-section reveal">
       <div class="video-card">
         <iframe
           src="https://www.youtube.com/embed/1TRgc0N5OVU?si=It-9m44qh5DRnKIA"
@@ -99,23 +119,37 @@
         </div>
       </div>
     </section>
-    <section class="info-section" id="service">
-       <div class="fade-background-top"></div>
-       <div class="info-cana">
-        <a href=""><h3>Details</h3></a>
+    <section class="service-nav" id="service">
+      <div class="nav-bar-container">
+        <ul class="service-list">
+          <li class="service-item">
+            <a href="#about" class="service-link">
+              <span class="service-label">The Villa</span>
+              <span class="service-hover-line"></span>
+            </a>
+          </li>
+          <li class="service-item">
+            <a href="#gallery" class="service-link">
+              <span class="service-label">Gallery</span>
+              <span class="service-hover-line"></span>
+            </a>
+          </li>
+          <li class="service-item">
+            <a href="#location" class="service-link">
+              <span class="service-label">Location</span>
+              <span class="service-hover-line"></span>
+            </a>
+          </li>
+          <li class="service-item">
+            <a href="#contact" class="service-link">
+              <span class="service-label">Inquiries</span>
+              <span class="service-hover-line"></span>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="info-cana">
-        <a href=""><h3>Location</h3></a>
-      </div>
-      <div class="info-cana">
-        <a href=""><h3>About Villa</h3></a>
-      </div>
-      <div class="info-cana">
-        <a href=""><h3>Contact Us</h3></a>
-      </div>
-      <div class="fade-background"></div>
     </section>
-    <section class="location-section" id="location">
+    <section class="location-section reveal" id="location">
       <div class="location-container">
         <!-- Map Side -->
         <div class="location-map">
@@ -146,7 +180,7 @@
         </div>
       </div>
     </section>
-    <section class="about-section" id="about">
+    <section class="about-section reveal" id="about">
       <div class="about-container">
         <!-- Left Content -->
         <div class="about-content">
@@ -171,19 +205,19 @@
             stay is effortless and exceptional from start to finish.
           </p>
 
-          <div class="about-highlights">
+          <div class="about-highlights reveal">
             <div class="highlight">
-              <h3>10+</h3>
+              <h3 class="counter" data-target="10">0</h3>
               <span>Years of Experience</span>
             </div>
 
             <div class="highlight">
-              <h3>500+</h3>
+              <h3 class="counter" data-target="500">0</h3>
               <span>Happy Guests</span>
             </div>
 
             <div class="highlight">
-              <h3>24/7</h3>
+              <h3 class="counter" data-target="24">0</h3>
               <span>Guest Support</span>
             </div>
           </div>
@@ -195,7 +229,40 @@
         </div>
       </div>
     </section>
-    <section class="contact-section" id="contact">
+    <section class="testimonials-section reveal">
+      <div class="testimonials-container">
+        <span class="section-subtitle">Guest Experiences</span>
+        <h2 class="section-title">What Our Guests Say</h2>
+        
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"An absolute dream. The attention to detail and the level of privacy at Casa Cana is unmatched. Every morning sunset was a memory we will cherish forever."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <strong>Sarah & James W.</strong>
+                <span>London, UK</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>"The most beautiful villa we've ever stayed in. The concierge service handled everything from private dinners to yacht rentals with such grace."</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <strong>Michael R.</strong>
+                <span>New York, USA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section reveal" id="contact">
       <div class="contact-container">
         <!-- Left Info -->
         <div class="contact-info">
@@ -235,55 +302,72 @@
     </section>
     <footer class="footer">
       <div class="footer-container">
-        <!-- Brand -->
-        <div class="footer-brand">
-          <h3>Casa Cana</h3>
-          <p>
-            Experience luxury, comfort, and unforgettable moments in the heart
-            of Punta Cana.
-          </p>
+        <!-- Brand & Newsletter -->
+        <div class="footer-main">
+          <div class="footer-brand">
+            <h3>Casa Cana</h3>
+            <p>
+              An exclusive boutique villa experience in the heart of Punta Cana. 
+              Elegance, privacy, and curated luxury at every turn.
+            </p>
+          </div>
+          <div class="footer-newsletter">
+            <h4>Join the Circle</h4>
+            <p>Subscribe to receive exclusive offers and seasonal stories.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your Email Address" required />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
         </div>
 
-        <!-- Links -->
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Location</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
+        <div class="footer-links-grid">
+          <!-- Links -->
+          <div class="footer-column">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Casa Cana</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#service">Exclusive Services</a></li>
+            </ul>
+          </div>
 
-        <!-- Contact -->
-        <div class="footer-contact">
-          <h4>Contact</h4>
-          <ul>
-            <li>📍 Punta Cana, DR</li>
-            <li>📞 +1 (809) 555-1234</li>
-            <li>✉ info@casacana.com</li>
-          </ul>
-        </div>
+          <!-- Contact -->
+          <div class="footer-column">
+            <h4>Reach Us</h4>
+            <ul>
+              <li>📍 Bavaro Beach, Punta Cana, DR</li>
+              <li>📞 +1 (809) 555-1234</li>
+              <li>✉ info@casacana.com</li>
+            </ul>
+          </div>
 
-        <!-- Social -->
-        <div class="footer-social">
-          <h4>Follow Us</h4>
-          <div class="social-icons">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">YouTube</a>
+          <!-- Social -->
+          <div class="footer-column">
+            <h4>Follow Our Story</h4>
+            <div class="footer-social-links">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Bottom -->
       <div class="footer-bottom">
-        <p>© 2026 Casa Cana. All rights reserved.</p>
+        <div class="footer-bottom-container">
+          <p>© 2026 Casa Cana Boutique Villa. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
       </div>
     </footer>
 
-    <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-chevron-up"></i></button>
 
     <script src="script.js"></script>
   </body>
