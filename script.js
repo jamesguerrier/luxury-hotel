@@ -69,4 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburger.innerText = '☰';
         });
     });
+
+    // 4. Video Overlay Play Toggle
+    const videoOverlay = document.getElementById('videoOverlay');
+    if (videoOverlay) {
+        videoOverlay.addEventListener('click', () => {
+            videoOverlay.classList.add('hidden');
+        });
+    }
 });
